@@ -1,6 +1,13 @@
 {{outlet}}
 <h2>Look for a food truck near to you</h2>
 
+<p id="message">{{message}}</p>
+{{place-autocomplete-field
+  inputClass= "place-autocomplete--input"
+  placeholder="Enter an address"
+  preventSubmit=true
+}}
+
 {{#each model as |food_truck|}}
   <truck class="listing">
     <h3>{{food_truck.name}}</h3>
@@ -8,7 +15,7 @@
       <span>facility_type:</span> {{food_truck.facility_type}}
     </div>
     <div class="detail type">
-      <span>status:</span> {{food_truck.status}}
+      <span>address:</span> {{food_truck.address}}
     </div>
     <div class="detail location">
       <span>food_items:</span> {{food_truck.food_items}}
