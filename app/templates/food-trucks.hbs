@@ -1,0 +1,17 @@
+{{outlet}}
+<h2>Look for a food truck near to you</h2>
+
+{{#each model as |food_truck|}}
+  <truck class="listing">
+    <h3>{{food_truck.name}}</h3>
+    <div class="detail owner">
+      <span>facility_type:</span> {{food_truck.facility_type}}
+    </div>
+    <div class="detail type">
+      <span>status:</span> {{food_truck.status}}
+    </div>
+    <div class="detail location">
+      <span>food_items:</span> {{food_truck.food_items}}
+    </div>
+  </truck>
+{{/each}}
